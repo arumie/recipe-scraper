@@ -46,7 +46,7 @@ export async function waitForSelectorNullable(page: Page, selector: string) {
       throw new Error("Element not found");
     }
     return selectedElement;
-  } catch (e) {
+  } catch (_e) {
     console.log(`Selector ${selector} not found`);
     return null;
   }
