@@ -32,7 +32,6 @@ export async function scrapeRecipe(
       extractSteps(page),
     ]);
 
-    await page.close();
     const res: Recipe = { link, title, description, tags, steps, ingredients };
 
     if (
@@ -41,6 +40,7 @@ export async function scrapeRecipe(
       (res.tags && res.tags.length > 0)
     ) {
       console.log("Recipe extraction successful");
+      await page.close();
       return recipeToMarkdown(res);
     } else {
       console.log(`No content for ${title} - ${link}`);
