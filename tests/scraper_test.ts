@@ -37,18 +37,18 @@ Deno.test(
             "Bake for 20 minutes",
           ],
         } as any),
-      ])
+      ]),
     );
 
     const result = await scrapeRecipe(page, "http://example.com/recipe");
 
     assertEquals(
       result,
-      "---\ntitle: Test Recipe\nurl: http://example.com/recipe\ntags:\n  - tag1\n  - tag2\n  - tag3\n---\n# Test Recipe\n[http://example.com/recipe](http://example.com/recipe)\n\nDelicious recipe description\n\n## Ingredients:\n\n- 1 cup flour\n- 2 eggs\n\n## Steps\n\n1. Mix ingredients\n2. Bake for 20 minutes\n"
+      "---\ntitle: Test Recipe\nurl: http://example.com/recipe\ntags:\n  - tag1\n  - tag2\n  - tag3\n---\n# Test Recipe\n[http://example.com/recipe](http://example.com/recipe)\n\nDelicious recipe description\n\n## Ingredients:\n\n- 1 cup flour\n- 2 eggs\n\n## Steps\n\n1. Mix ingredients\n2. Bake for 20 minutes\n",
     );
 
     assertSpyCalls(gotoStub, 1);
     assertSpyCalls(closeStub, 1);
     assertSpyCalls(waitForSelectorNullableStub, 5);
-  }
+  },
 );

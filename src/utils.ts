@@ -10,9 +10,11 @@ export interface Recipe {
 }
 
 const getPropertyList = (recipe: Recipe) => {
-  return `---\ntitle: ${recipe.title}\nurl: ${recipe.link}\ntags:${recipe.tags
-    ?.map((tag) => `\n  - ${tag.toLowerCase().trim().replaceAll(" ", "-")}`)
-    .join("")}\n---\n`;
+  return `---\ntitle: ${recipe.title}\nurl: ${recipe.link}\ntags:${
+    recipe.tags
+      ?.map((tag) => `\n  - ${tag.toLowerCase().trim().replaceAll(" ", "-")}`)
+      .join("")
+  }\n---\n`;
 };
 
 export function recipeToMarkdown(recipe: Recipe) {

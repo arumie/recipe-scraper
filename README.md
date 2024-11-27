@@ -1,6 +1,8 @@
 # Recipe Scraper
 
-This project is a recipe scraper that extracts recipe information from a given URL and converts it into Markdown format. It uses Puppeteer for web scraping and Deno as the runtime environment.
+This project is a recipe scraper that extracts recipe information from a given
+URL and converts it into Markdown format. It uses Puppeteer for web scraping and
+Deno as the runtime environment.
 
 ## Features
 
@@ -12,15 +14,17 @@ This project is a recipe scraper that extracts recipe information from a given U
 
 1. Install [Deno](https://deno.land/#installation).
 2. Clone this repository:
-  ```sh
-  git clone https://github.com/your-username/recipe-scraper.git
-  cd recipe-scraper
-  deno install -A
-  ```
+
+```sh
+git clone https://github.com/your-username/recipe-scraper.git
+cd recipe-scraper
+deno install -A
+```
 
 ## Usage
 
 To run the scraper, use the following command:
+
 ```sh
 deno task run <recipe_url> [headless]
 ```
