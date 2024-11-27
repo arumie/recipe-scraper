@@ -1,5 +1,5 @@
 import puppeteer from "puppeteer";
-import { scrapeRecipe } from "./scraper.ts";
+import { scrapeRecipe } from "./src/scraper.ts";
 
 const link = Deno.args[0];
 const headless = (Deno.args[1] ?? "true") === "true";
